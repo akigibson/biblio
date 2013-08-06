@@ -1,0 +1,9 @@
+%h2 Books
+
+= link_to "Add a book", new_book_path
+
+%ul
+  - @books.each do |book|
+    %li= link_to book.title, book
+
+= will_paginate @books
